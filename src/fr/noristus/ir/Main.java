@@ -10,6 +10,10 @@ import java.util.Scanner;
 
 import javax.imageio.ImageIO;
 
+/** WARNING : 
+ * 	800X600 MAX RESOLUTION IMAGES ONLY ! A VERY BIG RESOLUTION CAN FREEZE/CRASH YOUR COMPUTER !
+ * 	YOU HAVE BEEN WARNED !!! (i do love this sentence, but seriously use small images)
+ */
 public class Main 
 {
 	private static Scanner scanner = new Scanner(System.in);
@@ -17,17 +21,20 @@ public class Main
 	/** The image that we're going to process */
 	private static File image;
 	/** An HTML file that will contain the raster */
-	private static File outputFile = new File("/home/inoristus/Images/Papiers peints/log.html");
+	private static String currentUsersHomeDir = System.getProperty("user.home");
+	private static File outputFile = new File(currentUsersHomeDir + "//Images//log.html");
 	
 	public static void main(String[] vmArgs)
 	{
+		System.out.println("Output file path setten to :  " + outputFile.getAbsolutePath());
+		
 		// If the file doesen't exist, then create one. 
 		if (!outputFile.exists())
 		{
 			try 
 			{
 				outputFile.createNewFile();
-			} 
+			}
 			catch (IOException e) 
 			{
 				e.printStackTrace();
@@ -51,28 +58,35 @@ public class Main
 		while (!image.exists());
 		
 		
-		int[] pixels = ProcessImage(image);
+		String[] pixels = ProcessImage(image);
 		saveData(pixels, outputFile);
 	}
 	
 	/** Returns image's pixels data. */
-	private static int[] ProcessImage(File image)
+	private static String[] ProcessImage(File image)
 	{
 		System.out.println("Calculating image raster ...");
 		
 		long conversionTs = System.currentTimeMillis();		
 		
+		// (Test purposes) BufferedImage bufImage = new BufferedImage(8, 8, BufferedImage.TYPE_INT_RGB);
 		BufferedImage bufImage = getTypeIntRGB(image);
-	
+		
 		int[] pixels = ((DataBufferInt) bufImage.getData().getDataBuffer()).getData();	
+		String[] hexData = new String[pixels.length];
+		
+		for (int i = 0; i < pixels.length; i++)
+		{
+			hexData[i] = Integer.toHexString(pixels[i]);
+		}
 		
 		System.out.println("Image processing Took : " + ((System.currentTimeMillis() - conversionTs)) + " ms - Image bounds : " + bufImage.getWidth() + "x" + bufImage.getHeight());
 		
-		return pixels;
+		return hexData;
 	}
 	
 	/** Save pixels data to a file */
-	private static void saveData(int[] pixels, File output)
+	private static void saveData(String[] pixels, File output)
 	{
 		long writeFileTs = System.currentTimeMillis();
 
