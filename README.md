@@ -1,5 +1,6 @@
 <h2 align=center>Rasterizer</h2>
-
+<br>
+<br>
 <p align="center">
     <img src="https://img.shields.io/badge/Build%20Type-InDev-blue.svg?style=for-the-badge" alt="build">
     <img src="https://img.shields.io/badge/App%20Version-V0.0.1%20alpha-blue.svg?style=for-the-badge" alt="version"> 
@@ -7,7 +8,7 @@
 
 * Ce programme est à la base une idée de <a href="https://github.com/Chaika9">Chaika9</a>, donc un grand merci à lui ♡＾▽＾♡
 
-# Présentation
+## Présentation
 
 **Rasterizer, une petite console app qui va convertir une image passée en paramètre en un tableau qui contient plus ou moins des données (la plupart du temps c'est des couleurs en hexadécimal) pour chaque pixel dans cette image.**
 
