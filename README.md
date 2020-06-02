@@ -9,6 +9,7 @@
 <br>
 
 * Ce programme est à la base une idée de <a href="https://github.com/Chaika9">Chaika9</a>, donc un grand merci à lui ♡＾▽＾♡
+(N'oubliez pas de le soutenir 😉)
 
 ## Présentation
 
