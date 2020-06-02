@@ -1,7 +1,11 @@
 <h2 align=center>Rasterizer</h2>
 
+<p align="center">
+    <img src="https://img.shields.io/badge/Build%20Type-InDev-blue.svg?style=for-the-badge" alt="build">
+    <img src="https://img.shields.io/badge/App%20Version-V0.0.1%20alpha-blue.svg?style=for-the-badge" alt="version"> 
+</p>
 
-Ce programme est à la base une idée de <a href="https://github.com/Chaika9">Chaika9</a>, donc un grand merci à lui ^^
+* Ce programme est à la base une idée de <a href="https://github.com/Chaika9">Chaika9</a>, donc un grand merci à lui ♡＾▽＾♡
 
 # Présentation
 
