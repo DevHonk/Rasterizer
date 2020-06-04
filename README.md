@@ -3,6 +3,7 @@
 <p align="center">
     <img src="https://img.shields.io/badge/Build%20Type-InDev-blue.svg?style=for-the-badge" alt="build">
     <img src="https://img.shields.io/badge/App%20Version-V0.0.1%20alpha-blue.svg?style=for-the-badge" alt="version"> 
+    <img src="https://img.shields.io/badge/Tested%20On-Linux-blue.svg?style=for-the-badge" alt="version">
 </p>
 
 <br>
