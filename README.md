@@ -1,9 +1,9 @@
-<h2 align=center>Rasterizer-indev</h2>
+<h2 align=center>Rasterizer - Under Developpment</h2>
 
 <p align="center">
     <img src="https://img.shields.io/badge/Build%20Type%20UNDER-DEVELOPMENT-227294.svg?style=for-the-badge" alt="build">
     <img src="https://img.shields.io/badge/module%20Version-0.0.2%20alpha-227294.svg?style=for-the-badge" alt="version"> 
-    <img src="https://img.shields.io/badge/Successfully%20Tested%20On-Linux,%20Windows-227294.svg?style=for-the-badge" alt="tested-oss">
+    <img src="https://img.shields.io/badge/Successfully%20Tested%20On%20Linux,%20Windows-227294.svg?style=for-the-badge" alt="tested-oss">
 </p>
 
 <br>
