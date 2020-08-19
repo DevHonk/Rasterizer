@@ -52,15 +52,11 @@ public class RasterizerCore
 		int[] bufferData = ((DataBufferInt) in_ImageBuffer.getData().getDataBuffer()).getData();
 		
 		BufferedWriter writer = new BufferedWriter(new FileWriter(this.outputFile));
-		
+		writer.write(String.format("#define WIDTH %d%n#define HEIGHT %d%n", in_ImageBuffer.getWidth(), in_ImageBuffer.getHeight()));
+		writer.write("int pixels[WIDTH * HEIGHT] = {%n");
 		for (int pixelIndex = 0; pixelIndex < bufferData.length; pixelIndex++)
 		{
-			writer.write(String.format("#%s, ", String.valueOf(Integer.toHexString(bufferData[pixelIndex]))));
-			
-			if (pixelIndex % 5 == 0 && pixelIndex != 0)
-			{
-				writer.write("\n");
-			}
+			writer.write(String.format("%s, ", String.valueOf(Integer.toHexString(bufferData[pixelIndex]))));
 		}
 		
 		coreProgramEnd();
